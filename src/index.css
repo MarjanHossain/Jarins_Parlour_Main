@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-primary{
+    background-color:  #F63E7B;
+}
+.text-primary{
+    color: #111430;;
+}
+.text-secondary{
+    color:#F63E7B ;
+}
+.text-gray{
+   color:#848484 ; 
+}
+
+
+.btn{
+    @apply px-12 py-3 bg-primary text-white font-semibold text-xl rounded-lg hover:bg-white hover:border-2 hover:border-[#07add3]  hover:text-black hover:transition-all
+}
+.hover  li a {
+   @apply  hover:text-[#07add3] transition-all
+}
+.font-poppins{
+    font-family: 'Poppins', sans-serif;
+}
+
+.services h1{
+    @apply  text-secondary text-3xl font-extrabold pb-2
+}
+/* contact */
+.input input, textarea {
+    @apply  py-3 px-3 w-full text-lg  font-semibold bg-slate-100 outline-none rounded-xl
+}
+.icon{
+    @apply h-6 w-6
+}
+.authentication{
+   @apply flex items-center border text-[#000]  px-2 py-3 bg-gray-100 rounded-xl
+}
+
+/* Register */
+.inputForm input{
+    @apply border-b w-full pb-1  outline-none
+}
+
+
+
+
+
+
