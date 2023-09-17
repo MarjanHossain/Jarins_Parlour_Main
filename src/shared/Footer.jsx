@@ -63,7 +63,6 @@ const Footer = () => {
                     <div className="w-6 h-6 flex gap-6 ">
                         <img src={facebook} alt="" />
                         <img src={instagram} alt="" />
-                        {/* <img src={linkedin} alt="" /> */}
                         <img src={youtube} alt="" />
                     </div>
                 </div>
