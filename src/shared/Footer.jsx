@@ -2,7 +2,6 @@ import location from "../../src/assets/icons/map-pin-2-fill.png"
 import instagram from "../../src/assets/icons/instagram.png"
 import facebook from "../../src/assets/icons/facebook.png"
 import youtube from "../../src/assets/icons/youtube.png"
-import linkedin from "../../src/assets/icons/linkedin.png"
 import { AiOutlineCopyright } from "react-icons/ai"
 const Footer = () => {
 
