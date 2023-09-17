@@ -22,6 +22,9 @@
 .hover  li a {
    @apply  hover:text-[#07add3] transition-all
 }
+.hover h2  {
+   @apply  hover:text-[#07add3] transition-all hidden lg:block
+}
 .font-poppins{
     font-family: 'Poppins', sans-serif;
 }
@@ -29,12 +32,16 @@
 .services h1{
     @apply  text-secondary text-3xl font-extrabold pb-2
 }
-/* contact */
+/* ? contact */
 .input input, textarea {
     @apply  py-3 px-3 w-full text-lg  font-semibold bg-slate-100 outline-none rounded-xl
 }
-.icon{
-    @apply h-6 w-6
+/*? Booking */
+.input2 input, textarea{
+    @apply  py-3 px-3 w-full text-lg  font-medium bg-white outline-none rounded-xl
+}
+.icon img{
+    @apply h-6 w-6 
 }
 .authentication{
    @apply flex items-center border text-[#000]  px-2 py-3 bg-gray-100 rounded-xl

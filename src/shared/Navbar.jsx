@@ -1,15 +1,27 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../../src/assets/images/logo.png"
 import { useState } from "react"
 import { BiMenuAltRight } from "react-icons/bi"
 import { AiOutlineClose } from "react-icons/ai"
 const Navbar = () => {
+    const navigate = useNavigate();
+    const handleAchorLink = async (e, hashroute) => {
+        e.preventDefault();
+        await navigate('/');
+        window.location.hash = hashroute;
+    }
     const menu =
         <>
             <li><a href="/">Home</a></li>
-            <li><a href="">OurPortfolio</a></li>
-            <li><a href="/#team">Our Team</a></li>
-            <li><a href="/#contact">Contact Us</a></li>
+            <li><a href="/portfolio">OurPortfolio</a></li>
+            <li><a href="#team"
+                onClick={(e) => handleAchorLink(e, 'team')}
+            >Our Team</a></li>
+            <li><a href="#contact"
+                onClick={(e) => handleAchorLink(e, 'contact')}
+            >Contact Us</a></li>
+            <li><Link to="/admin/orderList">Admin</Link></li>
+            <li><Link to="/booking/book">Booking</Link></li>
         </>
 
     const [toggle, setToggle] = useState(false)
@@ -27,7 +39,7 @@ const Navbar = () => {
                     <Link to="/login" className="btn"> Login</Link>
                 </ul>
 
-                {/*//? Mobile */}
+                {/*//?====== Mobile======= */}
                 <div className="relative lg:hidden ">
                     <div onClick={() => setToggle(!toggle)} className="text-5xl">
                         {
@@ -37,9 +49,9 @@ const Navbar = () => {
                                 <BiMenuAltRight />
                         }
                     </div>
-                    <div className={`list-none absolute right-0  bg-white shadow-2xl px-10  py-5 text-xl space-y-4 font-medium rounded-xl ${toggle ? "block" : "hidden"}`}>
+                    <div className={`list-none absolute right-0  bg-cyan-200 z-10 shadow-2xl px-10  py-5 text-xl space-y-4  font-semibold rounded-xl ${toggle ? "block" : "hidden"}`}>
                         {menu}
-                        <Link to="/login">Login</Link>
+                        <div><Link to="/login">Login</Link></div>
                     </div>
                 </div>
 
